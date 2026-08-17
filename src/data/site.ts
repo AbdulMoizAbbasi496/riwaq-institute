@@ -36,23 +36,23 @@ export const pricing = [
 // replace every hero/about image site-wide in one place.
 export const images = {
   hero: {
-    src: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae",
-    alt: "Open Quran resting on a wooden rehal with prayer beads beside it",
+    src: "https://images.pexels.com/photos/8164752/pexels-photo-8164752.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    alt: "A woman and a young girl reading the Quran together inside a mosque",
     credit: "Placeholder image — replace in src/data/site.ts",
   },
   about: {
-    src: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c",
-    alt: "A young girl learning to read the Quran",
+    src: "https://images.pexels.com/photos/35105924/pexels-photo-35105924.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Children engaged in study inside a mosque",
     credit: "Placeholder image — replace in src/data/site.ts",
   },
 };
 
 export const navigationItems = [
-  { label: "Home", href: "#home" },
-  { label: "Courses", href: "#courses" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "About", href: "#about" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Courses", href: "/#courses" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "About", href: "/#about" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];

@@ -36,12 +36,16 @@ export function Hero() {
         <Container className="relative py-24 sm:py-28 lg:py-40">
           <div className="max-w-2xl">
             <Reveal>
-              <p className="font-header text-[0.78rem] font-bold uppercase tracking-[0.2em] text-brand-400">
-                Assalamu Alaikum · Welcome to {siteConfig.name}
+              <p
+                dir="rtl"
+                lang="ar"
+                className="font-arabic text-2xl leading-relaxed text-brand-200 sm:text-3xl"
+              >
+                السَّلَامُ عَلَيْكُمْ، أَهْلًا بِكُمْ فِي أَكَادِيمِيَّةِ النُّور
               </p>
             </Reveal>
             <Reveal delay={80}>
-              <h1 className="font-heading mt-6 text-balance text-4xl leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
+              <h1 className="font-heading mt-3 text-balance text-4xl leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
                 Online Quran Classes for Kids &amp; Adults
               </h1>
             </Reveal>

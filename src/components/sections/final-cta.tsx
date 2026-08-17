@@ -8,7 +8,7 @@ import { createWhatsAppUrl } from "@/lib/whatsapp";
 
 export function FinalCTASection() {
   return (
-    <section id="contact" className="scroll-mt-36 bg-brand-400 py-20 lg:py-28">
+    <section id="contact" className="scroll-mt-36 bg-brand-400 py-16 lg:py-24">
       <Container>
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="font-header text-[0.78rem] font-bold uppercase tracking-[0.2em] text-charcoal">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Clock, FileText } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -54,13 +55,13 @@ function CourseCard({ course }: { course: Course }) {
           </p>
 
           <div className="mt-4 flex flex-col gap-3 border-t border-ink-300 pt-4 sm:flex-row sm:items-center sm:justify-between">
-            <a
+            <Link
               href={`/courses/${course.slug}`}
               className="inline-flex items-center gap-2 text-sm font-semibold text-brand-500 transition-colors hover:text-charcoal"
             >
               Learn More
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-            </a>
+            </Link>
             <Button href={whatsappUrl} size="sm" external>
               Enroll Now
             </Button>
@@ -80,7 +81,7 @@ export function CoursesSection() {
   });
 
   return (
-    <section id="courses" className="scroll-mt-36 bg-white py-20 lg:py-28">
+    <section id="courses" className="scroll-mt-36 bg-white py-16 lg:py-24">
       <Container>
         <SectionHeading
           align="center"
@@ -104,21 +105,22 @@ export function CoursesSection() {
                   adults alike.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <Button
-                    href={featuredWhatsapp}
-                    size="sm"
-                    external
-                    ariaLabel={`Enroll in the ${featuredCourse.title} course on WhatsApp`}
-                  >
-                    Enroll Now
-                  </Button>
-                  <a
-                    href={`/courses/${featuredCourse.slug}`}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-white underline decoration-white/40 underline-offset-4 transition-colors hover:text-white"
-                  >
-                    Learn More
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </a>
+                <Button
+                  href={featuredWhatsapp}
+                  variant="dark"
+                  size="sm"
+                  external
+                  ariaLabel={`Enroll in the ${featuredCourse.title} course on WhatsApp`}
+                >
+                  Enroll Now
+                </Button>
+<Link
+                  href={`/courses/${featuredCourse.slug}`}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-white underline decoration-white/40 underline-offset-4 transition-colors hover:text-white"
+                >
+                  Learn More
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
                 </div>
               </div>
 

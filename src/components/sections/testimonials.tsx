@@ -11,7 +11,7 @@ export function TestimonialsSection() {
   if (testimonials.length === 0) return null;
 
   return (
-    <section aria-label="Testimonials" className="bg-ink-50 py-20 lg:py-28">
+    <section aria-label="Testimonials" className="bg-ink-50 py-16 lg:py-24">
       <Container>
         <SectionHeading
           align="center"

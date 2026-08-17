@@ -30,7 +30,7 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="scroll-mt-36 py-20 lg:py-28">
+    <section id="about" className="scroll-mt-36 py-16 lg:py-24">
       <Container className="grid items-center gap-14 lg:grid-cols-12 lg:gap-16">
         <Reveal className="lg:col-span-5">
           <div className="border border-ink-300 bg-white p-2 shadow-[0_16px_40px_rgba(25,15,0,0.1)]">

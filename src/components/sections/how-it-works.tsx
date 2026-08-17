@@ -8,7 +8,7 @@ import { createWhatsAppUrl } from "@/lib/whatsapp";
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="scroll-mt-36 bg-ink-50 py-20 lg:py-28">
+    <section id="how-it-works" className="scroll-mt-36 bg-ink-50 py-16 lg:py-24">
       <Container>
         <SectionHeading
           align="center"

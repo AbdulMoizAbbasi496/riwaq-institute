@@ -5,7 +5,7 @@ import { benefits } from "@/data/benefits";
 
 export function WhyChooseUs() {
   return (
-    <section id="why-us" className="scroll-mt-36 bg-ink-50 py-20 lg:py-28">
+    <section id="why-us" className="scroll-mt-36 bg-ink-50 py-16 lg:py-24">
       <Container>
         <SectionHeading
           align="center"

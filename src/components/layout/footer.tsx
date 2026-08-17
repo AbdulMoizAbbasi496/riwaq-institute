@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Clock3, GraduationCap, MessageCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -38,12 +39,12 @@ export function Footer() {
           <ul className="mt-5 space-y-3">
             {navigationItems.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="text-sm text-white/75 transition-colors hover:text-brand-400"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -56,12 +57,12 @@ export function Footer() {
           <ul className="mt-5 space-y-3">
             {courses.map((course) => (
               <li key={course.slug}>
-                <a
-                  href="#courses"
+                <Link
+                  href={`/courses/${course.slug}`}
                   className="text-sm text-white/75 transition-colors hover:text-brand-400"
                 >
                   {course.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

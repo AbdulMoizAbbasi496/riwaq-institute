@@ -15,7 +15,7 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-36 bg-ink-50 py-20 lg:py-28">
+    <section id="faq" className="scroll-mt-36 bg-ink-50 py-16 lg:py-24">
       <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <div className="lg:sticky lg:top-24">

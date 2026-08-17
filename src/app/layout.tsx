@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Alice, Karla, Poppins } from "next/font/google";
+import { Alice, Amiri, Karla, Poppins } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { Footer } from "@/components/layout/footer";
@@ -28,6 +28,13 @@ const karla = Karla({
   subsets: ["latin"],
   weight: ["500", "700"],
   variable: "--font-karla",
+  display: "swap",
+});
+
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: "400",
+  variable: "--font-arabic",
   display: "swap",
 });
 
@@ -72,7 +79,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${poppins.variable} ${alice.variable} ${karla.variable}`}
+      suppressHydrationWarning
+      className={`${poppins.variable} ${alice.variable} ${karla.variable} ${amiri.variable}`}
     >
       <body>
         <script

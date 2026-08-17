@@ -4,6 +4,7 @@
   --font-sans: var(--font-poppins);
   --font-heading: var(--font-alice);
   --font-header: var(--font-karla);
+  --font-arabic: var(--font-amiri);
 
   --color-brand-50: #fff8ec;
   --color-brand-100: #ffefd1;
@@ -76,6 +77,10 @@ body {
 
 .font-header {
   font-family: var(--font-header);
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
 }
 
 .text-balance {

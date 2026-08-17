@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { ChevronDown, Clock3, GraduationCap, Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -12,14 +13,14 @@ import { createWhatsAppUrl } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Courses", href: "#courses", dropdown: true },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Courses", href: "/#courses", dropdown: true },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -49,19 +50,19 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300",
-        scrolled && "shadow-[0_6px_24px_rgba(25,15,0,0.1)]",
+        "fixed inset-x-0 top-0 z-50 bg-white shadow-[0_2px_12px_rgba(25,15,0,0.09)] transition-shadow duration-300",
+        scrolled && "shadow-[0_8px_28px_rgba(25,15,0,0.16)]",
       )}
     >
       <div className="border-b border-ink-200">
         <Container className="flex h-20 items-center justify-between gap-6">
-          <a
-            href="#home"
+          <Link
+            href="/"
             aria-label="Al Noor Academy — back to top"
             onClick={() => setOpen(false)}
           >
             <Logo />
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-8 lg:flex">
             <div className="flex items-center gap-3">
@@ -119,34 +120,34 @@ export function Navbar() {
               {navItems.map((item) =>
                 item.dropdown ? (
                   <li key={item.label} className="group relative">
-                    <button
-                      type="button"
+                    <Link
+                      href={item.href}
                       className="flex items-center gap-1.5 py-3.5 text-[0.82rem] font-bold uppercase tracking-[0.08em] text-ink-700 transition-colors hover:text-brand-500"
                     >
                       {item.label}
                       <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
-                    </button>
+                    </Link>
                     <ul className="invisible absolute left-0 top-full z-10 w-64 border border-ink-300 bg-white py-2 opacity-0 shadow-[0_18px_40px_rgba(25,15,0,0.12)] transition-[opacity,visibility] duration-200 group-hover:visible group-hover:opacity-100">
                       {courses.map((course) => (
                         <li key={course.slug}>
-                          <a
+                          <Link
                             href={`/courses/${course.slug}`}
                             className="block px-5 py-2.5 text-sm font-medium text-ink-700 transition-colors hover:bg-brand-50 hover:text-brand-500"
                           >
                             {course.title}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   </li>
                 ) : (
                   <li key={item.href}>
-                    <a
+                    <Link
                       href={item.href}
                       className="block py-3.5 text-[0.82rem] font-bold uppercase tracking-[0.08em] text-ink-700 transition-colors hover:text-brand-500"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </li>
                 ),
               )}
@@ -167,13 +168,13 @@ export function Navbar() {
               <ul className="space-y-1">
                 {navItems.map((item) => (
                   <li key={item.href}>
-                    <a
+                    <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className="block px-3 py-3 text-sm font-bold uppercase tracking-[0.08em] text-ink-700 transition-colors hover:bg-brand-50 hover:text-brand-500"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -181,13 +182,13 @@ export function Navbar() {
               <ul className="mt-2 space-y-1 border-t border-ink-200 pt-4">
                 {courses.map((course) => (
                   <li key={course.slug}>
-                    <a
+                    <Link
                       href={`/courses/${course.slug}`}
                       onClick={() => setOpen(false)}
                       className="block px-3 py-2 text-sm text-ink-500 transition-colors hover:text-brand-500"
                     >
                       {course.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
