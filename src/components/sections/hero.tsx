@@ -11,7 +11,7 @@ import { createWhatsAppUrl } from "@/lib/whatsapp";
 
 const stats = [
   { value: String(courses.length), label: "Quran Courses" },
-  { value: "UK & USA", label: "Students Served" },
+  { value: "Worldwide", label: "Students Served" },
   { value: "30 Min", label: "Class Duration" },
   { value: "3-Day", label: "Free Trial" },
 ];
@@ -41,7 +41,7 @@ export function Hero() {
                 lang="ar"
                 className="font-arabic text-2xl leading-relaxed text-brand-200 sm:text-3xl"
               >
-                السَّلَامُ عَلَيْكُمْ، أَهْلًا بِكُمْ فِي أَكَادِيمِيَّةِ النُّور
+                السَّلَامُ عَلَيْكُمْ، أَهْلًا بِكُمْ فِي رِوَاق
               </p>
             </Reveal>
             <Reveal delay={80}>

@@ -56,7 +56,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
       <main className="py-40 text-center">
         <Container>
           <h1 className="font-heading text-3xl text-ink-900">Course not found</h1>
-          <Link href="/courses" className="mt-4 inline-block text-brand-500 underline">
+          <Link href="/#courses" className="mt-4 inline-block text-brand-500 underline">
             Back to courses
           </Link>
         </Container>
@@ -81,7 +81,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
           <nav className="text-xs text-ink-500">
             <Link href="/" className="hover:text-brand-500">Home</Link>
             <span className="mx-2">/</span>
-            <Link href="/courses" className="hover:text-brand-500">Courses</Link>
+            <Link href="/#courses" className="hover:text-brand-500">Courses</Link>
             <span className="mx-2">/</span>
             <span className="text-ink-700">{course.title}</span>
           </nav>

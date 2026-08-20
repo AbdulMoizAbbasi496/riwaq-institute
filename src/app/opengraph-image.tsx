@@ -74,7 +74,7 @@ export default function Image() {
               color: "rgba(246,241,231,0.72)",
             }}
           >
-            30-minute classes · 3-day free trial · UK &amp; USA pricing
+            30-minute classes · 3-day free trial · students worldwide
           </div>
         </div>
       </div>

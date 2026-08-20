@@ -16,7 +16,7 @@ const messages: Record<WhatsAppIntent, (options: WhatsAppOptions) => string> = {
   course: ({ courseName }) =>
     `Assalamu Alaikum, I'm interested in the ${courseName ?? "Quran"} course. I'd like to know more and claim the 3-day free trial.`,
   pricing: ({ region }) =>
-    `Assalamu Alaikum, I'd like to know more about your ${region ?? "UK/USA"} Quran classes and the monthly pricing.`,
+    `Assalamu Alaikum, I'd like to know more about your Quran classes and monthly pricing ${region ?? "in my local currency"}.`,
 };
 
 /**

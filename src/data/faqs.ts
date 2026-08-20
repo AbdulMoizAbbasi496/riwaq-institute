@@ -12,7 +12,7 @@ export const faqs: Faq[] = [
   {
     question: "What countries do you teach students in?",
     answer:
-      "Our online classes are available to students in the UK, the USA and beyond. All you need is a device with an internet connection to join the lesson.",
+      "Our online classes are available to students in the UK, USA, Europe, Australia and around the world. All you need is a device with an internet connection to join the lesson.",
   },
   {
     question: "How does the 3-day free trial work?",
@@ -32,7 +32,7 @@ export const faqs: Faq[] = [
   {
     question: "How much do the classes cost?",
     answer:
-      "Classes are £25 per month in the UK and $30 per month in the USA, with 30-minute lessons and a 3-day free trial to begin.",
+      "Classes are £25, $30 or Rs 8,319 per month, with 30-minute lessons and a 3-day free trial to begin. Students in any other country can message us on WhatsApp and we'll share pricing in your local currency.",
   },
   {
     question: "Are the classes suitable for adults too?",

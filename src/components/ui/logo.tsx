@@ -1,4 +1,4 @@
-import { BookOpen } from "lucide-react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -9,23 +9,29 @@ type LogoProps = {
 
 export function Logo({ dark = false, className }: LogoProps) {
   return (
-    <span className={cn("flex items-center gap-3", className)}>
-      <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center bg-brand-400 text-white">
-        <BookOpen className="h-5 w-5" strokeWidth={2} />
-      </span>
-      <span className="flex flex-col leading-none">
-        <span
-          className={cn(
-            "font-heading text-[1.3rem] leading-none",
-            dark ? "text-white" : "text-ink-900",
-          )}
-        >
-          Al Noor Academy
+    <span className={cn("inline-flex items-center", className)}>
+      {dark ? (
+        <span className="bg-white p-2.5">
+          <Image
+            src="/images/brand/riwaq_logo.svg"
+            alt="RIWAQ"
+            width={2708}
+            height={1477}
+            unoptimized
+            className="h-10 w-auto object-contain"
+          />
         </span>
-        <span className="mt-1 text-[0.6rem] font-bold uppercase tracking-[0.32em] text-brand-500">
-          Online Quran Classes
-        </span>
-      </span>
+      ) : (
+        <Image
+          src="/images/brand/riwaq_logo.svg"
+          alt="RIWAQ"
+          width={2708}
+          height={1477}
+          unoptimized
+          priority
+          className="h-12 w-auto object-contain"
+        />
+      )}
     </span>
   );
 }

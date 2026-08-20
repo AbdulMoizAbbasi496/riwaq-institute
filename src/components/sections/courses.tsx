@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Clock, FileText } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -36,10 +36,6 @@ function CourseCard({ course }: { course: Course }) {
 
         <div className="flex flex-1 flex-col p-5 sm:p-6">
           <div className="mb-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-500">
-            <span className="inline-flex items-center gap-1.5">
-              <FileText className="h-3.5 w-3.5 text-brand-500" />
-              {course.meta.lessons} Lessons
-            </span>
             <span className="inline-flex items-center gap-1.5">
               <Clock className="h-3.5 w-3.5 text-brand-500" />
               {course.meta.duration}
@@ -128,10 +124,10 @@ export function CoursesSection() {
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <p className="font-header text-[0.72rem] font-bold uppercase tracking-[0.18em] text-ink-500">
-                      Lessons
+                      Class Length
                     </p>
                     <p className="mt-2 font-heading text-3xl text-ink-900">
-                      {featuredCourse.meta.lessons}
+                      30 Minutes
                     </p>
                   </div>
                   <div>
@@ -154,10 +150,12 @@ export function CoursesSection() {
                     <p className="font-header text-[0.72rem] font-bold uppercase tracking-[0.18em] text-ink-500">
                       Pricing
                     </p>
-                    <p className="mt-2 font-heading text-3xl text-ink-900">
-                      {pricing[0].symbol}
-                      {pricing[0].amount}
-                      <span className="text-sm text-ink-500">/mo</span>
+                    <p className="mt-2 font-heading text-2xl text-ink-900">
+                      {pricing
+                        .filter((plan) => !plan.enquiry)
+                        .map((plan) => `${plan.symbol}${plan.amount}`)
+                        .join(" · ")}
+                      <span className="text-sm text-ink-500"> /mo</span>
                     </p>
                   </div>
                 </div>

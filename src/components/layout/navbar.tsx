@@ -58,7 +58,7 @@ export function Navbar() {
         <Container className="flex h-20 items-center justify-between gap-6">
           <Link
             href="/"
-            aria-label="Al Noor Academy — back to top"
+            aria-label="RIWAQ — back to top"
             onClick={() => setOpen(false)}
           >
             <Logo />

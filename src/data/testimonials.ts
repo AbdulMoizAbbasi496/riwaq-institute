@@ -4,7 +4,13 @@ export type Testimonial = {
   relation: string;
 };
 
-// No testimonials have been provided by the client yet.
-// Only add genuine, client-provided testimonials here — never fabricated ones.
+// Only genuine, client-provided testimonials belong here — never fabricated ones.
 // The testimonials section renders automatically when this array is non-empty.
-export const testimonials: Testimonial[] = [];
+export const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Alhamdulillah, we are very happy with our child’s progress. Hafiz Hammad is patient, professional, and an excellent Quran teacher. Highly recommended.",
+    name: "Ehsan's Dad",
+    relation: "Parent, UK",
+  },
+];

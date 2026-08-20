@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Clock3, GraduationCap, MessageCircle } from "lucide-react";
+import { Clock3, GraduationCap, Mail, MessageCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -81,7 +81,16 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-sm text-white/75 transition-colors hover:text-brand-400"
               >
-                WhatsApp — fastest reply
+                {siteConfig.whatsappDisplay} — fastest reply
+              </a>
+            </li>
+            <li className="flex items-start gap-3">
+              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-400" />
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="text-sm break-all text-white/75 transition-colors hover:text-brand-400"
+              >
+                {siteConfig.email}
               </a>
             </li>
             <li className="flex items-start gap-3">
@@ -98,12 +107,18 @@ export function Footer() {
           <ul className="mt-6 space-y-1 border-t border-white/10 pt-5">
             {pricing.map((plan) => (
               <li key={plan.code} className="flex items-baseline gap-2 text-sm">
-                <span className="font-medium text-white/80">{plan.region}</span>
-                <span className="font-heading text-base text-white">
-                  {plan.symbol}
-                  {plan.amount}
-                </span>
-                <span className="text-xs text-white/65">/month</span>
+                <span className="font-medium text-white/80">{plan.code}</span>
+                {plan.enquiry ? (
+                  <span className="text-xs text-white/65">ask for local pricing</span>
+                ) : (
+                  <>
+                    <span className="font-heading text-base text-white">
+                      {plan.symbol}
+                      {plan.amount}
+                    </span>
+                    <span className="text-xs text-white/65">/month</span>
+                  </>
+                )}
               </li>
             ))}
           </ul>
@@ -115,7 +130,7 @@ export function Footer() {
           <p>
             © {year} {siteConfig.name}. All rights reserved.
           </p>
-          <p>Online Quran classes for students in the UK, USA and beyond.</p>
+          <p>Online Quran classes for students in the UK, USA, Europe, Australia and around the world.</p>
         </Container>
       </div>
     </footer>

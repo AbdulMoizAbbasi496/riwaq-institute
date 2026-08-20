@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Premium online Quran classes for children and adults in the UK and USA. One-to-one lessons, 30-minute classes and a 3-day free trial — starting on WhatsApp.",
+    "Premium online Quran classes for children and adults in the UK, USA, Europe, Australia and around the world. One-to-one lessons, 30-minute classes and a 3-day free trial — starting on WhatsApp.",
   alternates: {
     canonical: "/",
   },

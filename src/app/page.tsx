@@ -6,6 +6,7 @@ import { FinalCTASection } from "@/components/sections/final-cta";
 import { Hero } from "@/components/sections/hero";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { PricingSection } from "@/components/sections/pricing";
+import { TeacherSection } from "@/components/sections/teacher";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <WhyChooseUs />
       <PricingSection />
       <FAQSection />
+      <TeacherSection />
       <TestimonialsSection />
       <FinalCTASection />
     </main>

@@ -25,7 +25,7 @@ export const benefits: Benefit[] = [
   },
   {
     title: "Learn From Anywhere",
-    description: "Join from home in the UK, USA or anywhere in the world.",
+    description: "Join from home in the UK, USA, Europe, Australia or anywhere in the world.",
     icon: Laptop,
   },
   {
